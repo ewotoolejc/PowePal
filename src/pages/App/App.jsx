@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import * as resortsAPI from '../../utilities/resorts-api';
 import AuthPage from '../AuthPage/AuthPage';
-// import NewOrderPage from '../NewOrderPage/NewOrderPage';
-// import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
-import PowePalv1 from '../../PowePalv1.png'
 import ResortList from '../ResortList/ResortList'
+import ResortHomePage from '../ResortHomePage/ResortHomePage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -28,14 +26,14 @@ export default function App() {
       { user ?
           <>
             <NavBar className='mainNav' user={user} setUser={setUser} />
-            {/* <Routes> */}
+            <Routes>
               {/* Route components in here */}
               {/* <Route path="/orders/new" element={<NewOrderPage />} />
-              <Route path="/orders" element={<OrderHistoryPage />} />
-            </Routes> */}
-            <br />
-            <img src={PowePalv1} alt='' className='Brand'/>
-            <div><ResortList resorts={resorts} /></div>
+              <Route path="/orders" element={<OrderHistoryPage />} /> */}
+              <Route path="resorts/" element={<ResortList resorts={resorts} />} />
+              <Route path="resorts/:id" element={<ResortHomePage resorts={resorts} />} />
+              <Route path="/*" element={<Navigate to="/resorts" />} />
+            </Routes>
           </>
           :
           <AuthPage setUser={setUser} />

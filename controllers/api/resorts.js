@@ -11,7 +11,7 @@ async function index(req, res) {
 }
 
 async function home(req, res) {
-    const home = await Resort.getResort(req.params.id);
+    const home = await Resort.findById(req.params.id);
     res.json(home);
 }
 
