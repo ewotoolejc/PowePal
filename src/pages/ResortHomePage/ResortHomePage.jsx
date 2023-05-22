@@ -22,8 +22,6 @@ export default function ResortHomePage() {
       <>
     <h1>{home.name}</h1>
     <SubNavBar resort={home._id} />
-    <br />
-    test
     <Routes>
       <Route path="/tickets" element={<ResortTicketPage />} />
       <Route path="/trails" element={<ResortTrailPage />} />

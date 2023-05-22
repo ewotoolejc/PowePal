@@ -11,7 +11,6 @@ async function trIndex(req, res) {
 }
 
 async function trail(req, res) {
-    const trail = await Trail.findById(req.params.id);
-    console.log(trail);
+    const trail = await Trail.findById(req.params.tId);
     res.json(trail);
 }
