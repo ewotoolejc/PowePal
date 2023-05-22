@@ -4,8 +4,10 @@ import SubNavBar from '../../components/SubNavBar/SubNavBar';
 import { useParams } from "react-router-dom";
 import * as resortsAPI from '../../utilities/resorts-api'
 import ResortTicketPage from '../ResortTicketPage/ResortTicketPage';
+import ResortTrailPage from '../ResortTrailPage/ResortTrailPage';
+import ResortTrailDetailPage from '../ResortTrailDetailPage/ResortTrailDetailPage'
 
-export default function ResortHomePage({}) {
+export default function ResortHomePage() {
   let resort  = useParams();
   const [home, setHome] = useState('');
   useEffect(function() {
@@ -24,6 +26,8 @@ export default function ResortHomePage({}) {
     test
     <Routes>
       <Route path="/tickets" element={<ResortTicketPage />} />
+      <Route path="/trails" element={<ResortTrailPage />} />
+      <Route path="/trails/:tId" element={<ResortTrailDetailPage resort={resort} />} />
     </Routes>
     </>
   );

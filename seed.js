@@ -2,19 +2,28 @@ require('dotenv').config();
 require('./config/database');
 
 
-const Ticket = require('./models/ticket')
+const Trail= require('./models/trail')
 
-// IIFE
-(async function() {
+const trails = [
+  {name: 'Chute', difficulty: 'Black Diamond', description: 'Entrance: Right after departing Single Chair and follows the lift line', hazards: 'Moguls, possible Ice, possible tree branches, rocks, an occasional wallet from a lift rider', resort: '6466d24aac706579c2f1c19a', user: ['646685dccd0d80bbde4de960']}
+];
 
-  await Ticket.deleteMany({});
-  const tickets = await Ticket.create([
-    {name: 'Adult Ticket', price: 80, resort: '6466d24aac706579c2f1c19a', user: ['646685dccd0d80bbde4de960']},
-    {name: 'Child Ticket', price: 50, resort: '6466d24aac706579c2f1c19a', user: ['646685dccd0d80bbde4de960']},
-    {name: 'Adult Ticket', price: 100, resort: '6466d24aac706579c2f1c19b', user: ['646685dccd0d80bbde4de960']},
-    {name: 'Child Ticket', price: 75, resort: '6466d24aac706579c2f1c19b', user: ['646685dccd0d80bbde4de960']},
-  ]);
+let done = 0;
 
-  process.exit();
+const seedData = async () => {
+  try {
+    await Trail.deleteMany({});
 
-})();
+    for (let i = 0; i < trails.length; i++) {
+      trails[i].save(function (err, result) {
+        done++;
+      });
+    }
+  } catch (err) {
+    console.error(err);
+  }
+  console.log(done);
+  console.log("Mock data is seeded from seed script.");
+};
+
+seedData()
