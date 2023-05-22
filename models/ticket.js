@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const ticketSchema = new Schema({ 
     name: String,
-    price: Number,
+    price: String,
     resort: {
         type: Schema.Types.ObjectId,
         ref: 'Resort',

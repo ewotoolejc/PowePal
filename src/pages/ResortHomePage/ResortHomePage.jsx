@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import SubNavBar from '../../components/SubNavBar/SubNavBar';
 import { useParams } from "react-router-dom";
 import * as resortsAPI from '../../utilities/resorts-api'
+import ResortTicketPage from '../ResortTicketPage/ResortTicketPage';
 
-export default function ResortHomePage({resorts}) {
+export default function ResortHomePage({}) {
   let resort  = useParams();
   const [home, setHome] = useState('');
   useEffect(function() {
@@ -17,9 +19,12 @@ export default function ResortHomePage({resorts}) {
   return (
       <>
     <h1>{home.name}</h1>
-    <SubNavBar />
+    <SubNavBar resort={home._id} />
     <br />
     test
+    <Routes>
+      <Route path="/tickets" element={<ResortTicketPage />} />
+    </Routes>
     </>
   );
 }

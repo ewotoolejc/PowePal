@@ -7,6 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import ResortList from '../ResortList/ResortList'
 import ResortHomePage from '../ResortHomePage/ResortHomePage';
+// import ResortTicketPage from '../ResortTicketPage/ResortTicketPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -31,7 +32,8 @@ export default function App() {
               {/* <Route path="/orders/new" element={<NewOrderPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} /> */}
               <Route path="resorts/" element={<ResortList resorts={resorts} />} />
-              <Route path="resorts/:id" element={<ResortHomePage resorts={resorts} />} />
+              <Route path="resorts/:id/*" element={<ResortHomePage />} />
+              {/* <Route path="resorts/:id/tickets" element={<ResortTicketPage />} /> */}
               <Route path="/*" element={<Navigate to="/resorts" />} />
             </Routes>
           </>
