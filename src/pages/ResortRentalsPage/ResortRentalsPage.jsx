@@ -14,7 +14,7 @@ export default function ResortRentalsPage() {
             rentalArr.push(rentalitemsAll[i])
         }
       };
-      let rentalitems = rentalArr.map(rental => <div>{rental.name} | {rental.brand} | ${rental.price} <br></br> <img src={rental.imageurl} /></div>)
+      let rentalitems = rentalArr.map(rental => <div>{rental.name} | {rental.brand} | ${rental.price} <br></br> <img src={rental.imageurl} alt='' /></div>)
       setRentalItems(rentalitems);
     }
     getRentalItems();

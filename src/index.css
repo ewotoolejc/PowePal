@@ -21,9 +21,24 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(152, 212, 237);
+  /* background-color: rgb(152, 212, 237); */
+  background-image: url('/src/digital_painting_skiers_and_snowboarders.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 2vmin;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.Brand {
+  justify-self: start;
+  border-radius: 1vmin;
+  height: 15vmin;
+  width: 15vmin;
 }
 
 code {
@@ -32,6 +47,8 @@ code {
 }
 
 #root {
+  grid-row: 1;
+  justify-self: center;
   height: 100%;
 }
 

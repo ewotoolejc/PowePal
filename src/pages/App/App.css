@@ -1,6 +1,10 @@
 .App {
+  justify-self: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -35,8 +39,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.Brand {
-  border-radius: 3vmin;
 }

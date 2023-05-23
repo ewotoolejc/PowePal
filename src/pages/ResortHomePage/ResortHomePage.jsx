@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, useParams, Link } from 'react-router-dom';
 import SubNavBar from '../../components/SubNavBar/SubNavBar';
 import * as resortsAPI from '../../utilities/resorts-api'
+// import * as weatherAPI from '../../utilities/accuweather-api'
 import ResortTicketPage from '../ResortTicketPage/ResortTicketPage';
 import ResortTrailPage from '../ResortTrailPage/ResortTrailPage';
 import ResortTrailDetailPage from '../ResortTrailDetailPage/ResortTrailDetailPage';
@@ -13,14 +14,30 @@ import ResortRentalsPage from '../ResortRentalsPage/ResortRentalsPage';
 export default function ResortHomePage() {
   let resort  = useParams();
   const [home, setHome] = useState('');
+  const [curCon, setCurCon] = useState('');
   useEffect(function() {
     async function getHome() {
       const home = await resortsAPI.getResort(resort.id);
       setHome(home);
     }
     getHome();
-  }, [resort.id]);
-
+    async function getcurCon() {
+      const url = `http://dataservice.accuweather.com/currentconditions/v1/${home.locationkey}?apikey=jNjA9Q5zZRLqHZBwwgCQ7qc5MwvWByK3`;
+      fetch(url)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Weather data not available');
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setCurCon(data[0]);;
+      })
+      .catch(console.error);
+  }
+  getcurCon();
+  }, [resort.id, home.locationkey]);
+  console.log(curCon);
   return (
       <>
     <h1><Link to={`/resorts/${home._id}`}>{home.name}</Link></h1>
@@ -33,6 +50,13 @@ export default function ResortHomePage() {
       <Route path="/trails" element={<ResortTrailPage />} />
       <Route path="/trails/:tId" element={<ResortTrailDetailPage resort={resort} />} />
     </Routes>
+    <p>
+      {curCon.WeatherText}
+      <br />
+      {curCon.HasPrecipitation === true ? 'Tis Precipitating!' : 'All Clear!'}
+      <br />
+      {curCon.Temperature.Imperial.Value}°F
+    </p>
     </>
   );
 }
