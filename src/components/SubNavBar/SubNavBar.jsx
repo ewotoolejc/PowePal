@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function SubNavBar({ resort }) {
+export default function SubNavBar({ resort, curCon }) {
   
     return (
       <nav>
@@ -14,7 +14,7 @@ export default function SubNavBar({ resort }) {
         &nbsp;&nbsp; 
         <Link to={`/resorts/${resort}/tickets`}>Tickets</Link>
         &nbsp;&nbsp;
-        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | &nbsp;&nbsp;<Link to={`/resorts/${resort}/rentals`}>Rentals</Link>
+        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | &nbsp;&nbsp;<Link to={`/resorts/${resort}/rentals`}>Rentals</Link>&nbsp;&nbsp;|&nbsp;&nbsp; <span>Currently: {curCon.condition.text} </span>
       </nav>
     );
   }

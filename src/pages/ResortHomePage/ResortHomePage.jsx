@@ -14,49 +14,43 @@ import ResortRentalsPage from '../ResortRentalsPage/ResortRentalsPage';
 export default function ResortHomePage() {
   let resort  = useParams();
   const [home, setHome] = useState('');
-  const [curCon, setCurCon] = useState('');
+  const [weather, setWeather] = useState('');
   useEffect(function() {
     async function getHome() {
       const home = await resortsAPI.getResort(resort.id);
       setHome(home);
     }
-    getHome();
-    async function getcurCon() {
-      const url = `http://dataservice.accuweather.com/currentconditions/v1/${home.locationkey}?apikey=jNjA9Q5zZRLqHZBwwgCQ7qc5MwvWByK3`;
+    getHome()
+    async function getAllWeather() {
+      const home = await resortsAPI.getResort(resort.id);
+      const url = `http://api.weatherapi.com/v1/forecast.json?key=8f291e6fb6f7407eb93171917232305&q=${home.town}&days=5`;
       fetch(url)
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Weather data not available');
+          throw new Error('Five Day Weather data not available');
         }
         return res.json();
       })
       .then((data) => {
-        setCurCon(data[0]);;
+        console.log(data);
+        setWeather(data);;
       })
       .catch(console.error);
   }
-  getcurCon();
-  }, [resort.id, home.locationkey]);
-  console.log(curCon);
+  getAllWeather();
+  }, [resort.id, home.town]);
   return (
       <>
     <h1><Link to={`/resorts/${home._id}`}>{home.name}</Link></h1>
-    <SubNavBar resort={home._id} />
+    <SubNavBar resort={home._id} curCon={weather.current} />
     <Routes>
-      <Route path="/conditions" element={<ResortConditionsPage resort={resort} />} />
+      <Route path="/conditions" element={<ResortConditionsPage resort={home} curCon={weather.current} fiveDay={weather.forecast}/>} />
       <Route path="/dining" element={<ResortDiningPage resort={resort} />} />
       <Route path="/rentals" element={<ResortRentalsPage resort={resort} />} />
       <Route path="/tickets" element={<ResortTicketPage />} />
       <Route path="/trails" element={<ResortTrailPage />} />
       <Route path="/trails/:tId" element={<ResortTrailDetailPage resort={resort} />} />
     </Routes>
-    <p>
-      {curCon.WeatherText}
-      <br />
-      {curCon.HasPrecipitation === true ? 'Tis Precipitating!' : 'All Clear!'}
-      <br />
-      {curCon.Temperature.Imperial.Value}°F
-    </p>
     </>
   );
 }
