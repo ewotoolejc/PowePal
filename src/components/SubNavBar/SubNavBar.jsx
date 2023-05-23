@@ -14,7 +14,7 @@ export default function SubNavBar({ resort }) {
         &nbsp;&nbsp; 
         <Link to={`/resorts/${resort}/tickets`}>Tickets</Link>
         &nbsp;&nbsp;
-        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | Rentals
+        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | &nbsp;&nbsp;<Link to={`/resorts/${resort}/rentals`}>Rentals</Link>
       </nav>
     );
   }

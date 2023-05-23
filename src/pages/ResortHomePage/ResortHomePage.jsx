@@ -7,6 +7,7 @@ import ResortTrailPage from '../ResortTrailPage/ResortTrailPage';
 import ResortTrailDetailPage from '../ResortTrailDetailPage/ResortTrailDetailPage';
 import ResortConditionsPage from '../ResortConditionsPage/ResortConditionsPage';
 import ResortDiningPage from '../ResortDiningPage/ResortDiningPage';
+import ResortRentalsPage from '../ResortRentalsPage/ResortRentalsPage';
 
 
 export default function ResortHomePage() {
@@ -27,6 +28,7 @@ export default function ResortHomePage() {
     <Routes>
       <Route path="/conditions" element={<ResortConditionsPage resort={resort} />} />
       <Route path="/dining" element={<ResortDiningPage resort={resort} />} />
+      <Route path="/rentals" element={<ResortRentalsPage resort={resort} />} />
       <Route path="/tickets" element={<ResortTicketPage />} />
       <Route path="/trails" element={<ResortTrailPage />} />
       <Route path="/trails/:tId" element={<ResortTrailDetailPage resort={resort} />} />
