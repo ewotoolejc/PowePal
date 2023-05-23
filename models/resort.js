@@ -7,6 +7,8 @@ const resortSchema = new Schema({
     state: String,
     locationkey: Number,
     description: String,
+    lat: Number,
+    long: Number,
     user: [{
         type: Schema.Types.ObjectId,
         ref: 'User',

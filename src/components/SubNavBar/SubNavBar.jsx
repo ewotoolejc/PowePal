@@ -14,7 +14,7 @@ export default function SubNavBar({ resort, curCon }) {
         &nbsp;&nbsp; 
         <Link to={`/resorts/${resort}/tickets`}>Tickets</Link>
         &nbsp;&nbsp;
-        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | &nbsp;&nbsp;<Link to={`/resorts/${resort}/rentals`}>Rentals</Link>&nbsp;&nbsp;|&nbsp;&nbsp; <span>Currently: {curCon.feelslike_f}°F & {curCon.condition.text} </span>
+        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | &nbsp;&nbsp;<Link to={`/resorts/${resort}/rentals`}>Rentals</Link>&nbsp;&nbsp;|&nbsp;&nbsp; <span>Currently: {curCon?.feelslike_f ?? "Not loaded yet"}°F & {curCon?.condition?.text ?? "Not loaded yet"}  </span>
       </nav>
     );
   }
