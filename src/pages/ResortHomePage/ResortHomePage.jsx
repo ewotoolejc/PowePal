@@ -44,7 +44,7 @@ export default function ResortHomePage() {
     <h1><Link to={`/resorts/${home._id}`}>{home.name}</Link></h1>
     <SubNavBar resort={home._id} curCon={weather.current} />
     <Routes>
-      <Route path="/conditions" element={<ResortConditionsPage resort={home} curCon={weather.current} fiveDay={weather.forecast}/>} />
+      <Route path="/conditions" element={<ResortConditionsPage resort={home} curCon={weather.current} fiveDay={weather.forecast.forecastday}/>} />
       <Route path="/dining" element={<ResortDiningPage resort={resort} />} />
       <Route path="/rentals" element={<ResortRentalsPage resort={resort} />} />
       <Route path="/tickets" element={<ResortTicketPage />} />
