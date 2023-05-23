@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ticketSchema = new Schema({ 
+const fooditemSchema = new Schema({ 
     name: String,
     price: Number,
+    restaurant: String,
+    description: String,
     resort: {
         type: Schema.Types.ObjectId,
         ref: 'Resort',
@@ -16,4 +18,4 @@ const ticketSchema = new Schema({
     timestamps: true,  
 });
 
-module.exports = mongoose.model('Ticket', ticketSchema);
+module.exports = mongoose.model('FoodItem', fooditemSchema);

@@ -11,7 +11,7 @@ export default function ResortTrailItem({resort}) {
       setTrail(trail);
     }
     getTrailDetail();
-  }, []);
+  }, [resort.id, trailId.tId]);
 
 
   return (

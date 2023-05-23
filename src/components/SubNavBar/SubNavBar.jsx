@@ -8,13 +8,13 @@ export default function SubNavBar({ resort }) {
       &nbsp; | &nbsp;
       <Link to="/orders/new">New Order</Link>
       &nbsp;&nbsp; */}
-        Full Conditions | &nbsp;&nbsp; 
+        <Link to={`/resorts/${resort}/conditions`}>Full Conditions</Link>&nbsp;&nbsp; | &nbsp;&nbsp; 
         <Link to={`/resorts/${resort}/trails`}>Trails</Link>
         &nbsp;&nbsp; |
         &nbsp;&nbsp; 
         <Link to={`/resorts/${resort}/tickets`}>Tickets</Link>
         &nbsp;&nbsp;
-        | Dining Options | Rentals
+        | &nbsp;&nbsp;<Link to={`/resorts/${resort}/dining`}>Dining Options</Link>&nbsp;&nbsp; | Rentals
       </nav>
     );
   }

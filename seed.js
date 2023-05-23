@@ -2,28 +2,15 @@ require('dotenv').config();
 require('./config/database');
 
 
-const Trail= require('./models/trail')
+const Resort = require('./models/resort')
 
-const trails = [
-  {name: 'Chute', difficulty: 'Black Diamond', description: 'Entrance: Right after departing Single Chair and follows the lift line', hazards: 'Moguls, possible Ice, possible tree branches, rocks, an occasional wallet from a lift rider', resort: '6466d24aac706579c2f1c19a', user: ['646685dccd0d80bbde4de960']}
-];
+(async function() {
+  const resorts = await Resort.create([
+      {name: 'Smugglers Notch', town: 'Stowe', state: 'VT', description: 'Placehold', user: ['646685dccd0d80bbde4de960']},
+    ]);
 
-let done = 0;
+  console.log(resorts);
 
-const seedData = async () => {
-  try {
-    await Trail.deleteMany({});
+  process.exit();
 
-    for (let i = 0; i < trails.length; i++) {
-      trails[i].save(function (err, result) {
-        done++;
-      });
-    }
-  } catch (err) {
-    console.error(err);
-  }
-  console.log(done);
-  console.log("Mock data is seeded from seed script.");
-};
-
-seedData()
+})();

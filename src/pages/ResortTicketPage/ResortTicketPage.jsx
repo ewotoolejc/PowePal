@@ -18,7 +18,7 @@ export default function ResortTicketPage() {
       setTickets(tickets);
     }
     getTickets();
-  }, []);
+  }, [resort.id]);
   return (
     <>
     <h1>Tickets</h1> 

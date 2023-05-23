@@ -19,12 +19,12 @@ export default function ResortTrailPage() {
       setTrails(trails);
     }
     getTrails();
-  }, []);
+  }, [resort]);
   return (
     <>
     <h1>Trails</h1> 
     <br />
-    { trails ? <div>{trails}</div>
+    { trails.length ? <div>{trails}</div>
     :
     <h2>
         No Trails...yet!
