@@ -1,0 +1,18 @@
+.Diningh1 {
+    color: white;
+    text-shadow: -1px 0 rgba(94,23,235,1), 0 1px rgba(94,23,235,1), 1px 0 rgba(94,23,235,1), 0 -1px rgba(94,23,235,1);
+    text-decoration: underline;
+}
+
+.fooditemscontainer {
+    background-color: rgba(84,84,84,.85);
+    padding: 2vmin;
+    border-radius: 1vmin;
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
+}
+
+.fooditem {
+    color: rgba(193,255,114,1);
+}

@@ -1,0 +1,14 @@
+.loginbutton {
+  margin: 1vmin;
+  padding: 1vmin;
+  color: rgba(193,255,114,1);
+  background-color: rgba(94,23,235,1);
+  font-size: 2vmin;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: .1vmin solid rgba(193,255,114,1);
+  border-radius: .5vmin;
+  outline: none;
+  cursor: pointer;
+}

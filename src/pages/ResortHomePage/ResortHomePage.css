@@ -1,0 +1,9 @@
+.resortNameh1 {
+    font-family: 'Racing Sans One', cursive;
+    text-decoration: none;
+    color: azure;
+}
+
+.resortNameh1:visited {
+    color: azure;
+  }

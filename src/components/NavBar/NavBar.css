@@ -1,3 +1,45 @@
-subnav {
-    align-self: flex-end;
+.mainnavwrap {
+    background: linear-gradient(25deg, rgba(84,84,84,1) 0%, rgba(94,23,235,1) 35%, rgba(193,255,114,1) 84%);
+    padding: 1vmin;
+    border-radius: 2vmin;
+}
+
+.mainNav {
+    background-color: rgba(120, 181, 209,.8);
+    padding: 1rem;
+    border-radius: 2vmin;
+}
+
+.mainNav a {
+color: white;
+}
+
+.homebtn {
+background-color: rgba(193,255,114, .6);
+padding: 1vmin;
+border-radius: 2vmin;
+text-decoration: none;
+}
+
+.homebtn:hover {
+background-color: rgba(94,23,235,.6);
+color: rgba(193,255,114,1);
+}
+
+#userwelcome {
+    color: rgba(94,23,235,1);
+    text-shadow: -1px 0 rgba(193,255,114,1), 0 1px rgba(193,255,114,1), 1px 0 rgba(193,255,114,1), 0 -1px rgba(193,255,114,1);
+    font-weight: bold;
+}
+
+.logoutbtn {
+    background-color: rgba(94,23,235,.6);
+    padding: 1vmin;
+    border-radius: 2vmin;
+    text-decoration: none;
+}
+
+.logoutbtn:hover {
+    background-color: rgba(193,255,114,.6);
+    color: rgba(94,23,235,1);
 }

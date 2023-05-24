@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import * as ticketsAPI from '../../utilities/tickets-api'
+import * as ticketsAPI from '../../utilities/tickets-api';
+import './ResortTicketPage.css'
 
 export default function ResortTicketPage() {
   let resort  = useParams();
@@ -14,16 +15,28 @@ export default function ResortTicketPage() {
             ticketsArr.push(ticketsAll[i])
         }
       };
-      let tickets = ticketsArr.map(ticket => `${ticket.name} | $${ticket.price}`)
+      let tickets = ticketsArr.map(ticket => <><td>{ticket.name}</td> <td>${ticket.price}</td></>)
       setTickets(tickets);
     }
     getTickets();
   }, [resort.id]);
   return (
     <>
-    <h1>Tickets</h1> 
+    <h1 className='Tixh1'>Tickets</h1> 
     <br />
+    <div className='TixPgitems'>
+    <table className="Tixtable" >
+    <thead>
+      <tr>
+        <th>Ticket Type</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
     {tickets}
+    </tbody>
+    </table>
+    </div>
     </>
   );
 }

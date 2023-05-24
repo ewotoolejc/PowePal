@@ -1,10 +1,12 @@
+import './ResortConditionsPage.css';
+
 export default function ResortConditionsPage({resort, curCon, fiveDay}) {
     let dateOne = (fiveDay[0].date).substring(5)
     let dateTwo = (fiveDay[1].date).substring(5)
     let dateThree = (fiveDay[2].date).substring(5)
     let dateFour = (fiveDay[3].date).substring(5)
     let dateFive = (fiveDay[4].date).substring(5)
-    return <div>
+    return <div className='conditionspage'>
         <h1>{resort.name} Conditions</h1>
         <h2>Current:</h2>
         <p>

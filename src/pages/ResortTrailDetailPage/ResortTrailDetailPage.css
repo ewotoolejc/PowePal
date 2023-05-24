@@ -1,0 +1,24 @@
+.traildetailpgdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trailnameh1 {
+    color: white;
+    text-shadow: -1px 0 rgba(94,23,235,1), 0 1px rgba(94,23,235,1), 1px 0 rgba(94,23,235,1), 0 -1px rgba(94,23,235,1);
+    text-decoration: underline;
+}
+
+.traildetails {
+    background-color: rgba(193,255,114,.7);
+    padding: 2vmin;
+    border-radius: 2vmin;
+    color: rgba(94,23,235,1);
+    margin: 2vmin;
+}
+
+.label {
+    font-weight: bold;
+    text-decoration: underline;
+}

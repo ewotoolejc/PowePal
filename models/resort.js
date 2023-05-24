@@ -5,10 +5,10 @@ const resortSchema = new Schema({
     name: String,
     town: String,
     state: String,
-    locationkey: Number,
     description: String,
     lat: Number,
     long: Number,
+    logourl: String,
     user: [{
         type: Schema.Types.ObjectId,
         ref: 'User',

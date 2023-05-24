@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import * as rentalitemsAPI from '../../utilities/rentalitems-api'
+import * as rentalitemsAPI from '../../utilities/rentalitems-api';
+import './ResortRentalsPage.css'
 
 export default function ResortRentalsPage() {
   let resort  = useParams();
@@ -14,16 +15,21 @@ export default function ResortRentalsPage() {
             rentalArr.push(rentalitemsAll[i])
         }
       };
-      let rentalitems = rentalArr.map(rental => <div>{rental.name} | {rental.brand} | ${rental.price} <br></br> <img src={rental.imageurl} alt='' /></div>)
+      let rentalitems = rentalArr.map(rental => <div className='singlerentalitem'>{rental.name} | {rental.brand} | ${rental.price} <br></br><br></br> <img src={rental.imageurl} alt='' /></div>)
       setRentalItems(rentalitems);
     }
     getRentalItems();
   }, [resort.id]);
   return (
     <>
-    <h1>Rental Options</h1> 
+    <h1 className='rentalh1'>Rental Options</h1> 
     <br />
-    {rentalitems}
+    { rentalitems.length ? <div className='rentalitemscontainer'>{rentalitems}</div>
+    :
+    <h2>
+        No Rentals available...for now!
+    </h2>
+    }
     </>
   );
 }

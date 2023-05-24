@@ -1,0 +1,49 @@
+.PowePalMain {
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGY4Y2JkYTNhNDMzYmNiZDgxZGYxZjcxNWMzMGY4MGU5OTQwOTg2OSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/2aLiVCqTZmxwXeRfMh/giphy.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 40vw;
+    border-radius: 3vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PowePalmaintext {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 16vmin;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px rgba(94,23,235,1);
+    font-weight: 500;
+    pointer-events: none;
+    animation: fade 5s ease-in 1s infinite;
+    opacity: 0;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.1;
+    }
+    
+}
+
+#authpgbtn {
+    background-color: transparent;
+    border-color: rgba(193,255,114,1);
+    color: rgba(193,255,114,1);
+}
+
+#authpgbtn:hover {
+    background-color: rgba(94,23,235,.2);
+    border-color: rgba(193,255,114,1);
+    color: rgba(193,255,114,1);
+}

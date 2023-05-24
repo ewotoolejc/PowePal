@@ -1,0 +1,12 @@
+.ResortListpg {
+    display: flex;
+    flex-direction: column;
+    gap: 7vmin;
+}
+
+.allresortstxt {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 12vmin;
+    color: rgba(193,255,114,.4);
+    -webkit-text-stroke: 3px rgba(94,23,235,1);
+}

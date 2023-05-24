@@ -1,0 +1,19 @@
+.TixPgitems {
+    color: rgba(193,255,114,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Tixh1 {
+    color: white;
+    text-shadow: -1px 0 rgba(94,23,235,1), 0 1px rgba(94,23,235,1), 1px 0 rgba(94,23,235,1), 0 -1px rgba(94,23,235,1);
+    text-decoration: underline;
+}
+
+.Tixtable, th, td {
+    background-color: rgba(94,23,235,1);
+    padding: 1vmin;
+    border-collapse: collapse;
+    border: .3vmin solid;
+}

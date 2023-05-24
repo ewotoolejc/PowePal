@@ -1,0 +1,19 @@
+.traillinkout {
+    background-color: rgba(193,255,114,1);
+    padding: 1vmin;
+    border-radius: 1vmin;
+}
+
+.traillinkout:hover {
+    background-color: rgba(84,84,84,1); 
+}
+
+.traillink {
+    text-decoration: none;
+    font-size: 3vmin;
+    color: rgba(94,23,235,1);
+}
+
+.traillink:hover {
+    color: rgba(193,255,114,1)
+}

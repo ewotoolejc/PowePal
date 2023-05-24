@@ -1,0 +1,17 @@
+.resortpgitem {
+    gap: 2vmin;
+}
+
+.resorthomelink {
+    font-size: 5vmin;
+    text-decoration: none;
+    color: rgba(193,255,114,1);
+    background-color: rgba(84,84,84,.8);
+    padding: 2vmin;
+    border-radius: 2vmin;
+}
+
+.resorthomelink:hover {
+    background-color: rgba(193,255,114,.6);
+    color: rgba(84,84,84,1);
+}

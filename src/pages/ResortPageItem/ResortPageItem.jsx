@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 // import ResortHomePage from '../ResortHomePage/ResortHomePage';
+import './ResortPageItem.css'
 
 export default function ResortPageItem({resort}) {
   // {<ResortHomePage resortID={resort.id}/>}
   return (
       <>
-    <li><Link to={`/resorts/${resort._id}`}>{resort.name}</Link></li>
+    <div><Link to={`/resorts/${resort._id}`} className='resorthomelink'>{resort.name}</Link></div>
     </>
   );
 }

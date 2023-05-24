@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import './ResortTrailItem.css'
 
 export default function ResortTrailItem({resort, trail}) {
   return (
       <>
-    <li><Link to={`/resorts/${resort.id}/trails/${trail._id}`}>{trail.name}</Link></li>
+    <div className='traillinkout'><Link to={`/resorts/${resort._id}/trails/${trail._id}`} className='traillink'>{trail.name}</Link></div>
     </>
   );
 }

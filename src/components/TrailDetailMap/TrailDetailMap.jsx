@@ -8,17 +8,17 @@ const containerStyle = {
 
   const zoom = 9.8;
   
-export default function MapForTrails({resort}) {
+export default function TrailDetailMap({trail}) {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: "AIzaSyA0ZcnOz5HgPqbRcAUtUwYWgeu8XOwOAjQ"
     });
-
-    const center = {
-        lat: resort.lat,
-    lng: resort.long
-    };
     
+    const center = {
+        lat: trail.lat,
+    lng: trail.long
+    };
+    console.log(center)
     const [map, setMap] = useState(null);
         
 

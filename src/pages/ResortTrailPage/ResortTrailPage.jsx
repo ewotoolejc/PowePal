@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
 import * as trailsAPI from '../../utilities/trails-api'
 import ResortTrailItem from '../ResortTrailItem/ResortTrailItem'
 import MapforTrails from '../../components/MapforTrails/MapforTrails'
+import './ResortTrailPage.css';
 
 export default function ResortTrailPage({resort}) {
   const [trails, setTrails] = useState('');
@@ -21,7 +21,7 @@ export default function ResortTrailPage({resort}) {
     getTrails();
   }, [resort]);
   return (
-    <>
+    <div id='TrailPage'>
     <h1>Trails</h1> 
     <MapforTrails resort={resort}/>
     <br />
@@ -31,6 +31,6 @@ export default function ResortTrailPage({resort}) {
         No Trails...yet!
     </h2>
     }
-    </>
+    </div>
   );
 }

@@ -1,0 +1,26 @@
+.subNav {
+    color: rgba(94,23,235,1);
+    font-weight: 700;
+}
+
+.subNav a {
+    color: rgba(193,255,114,1);
+    background-color:  rgba(94,23,235,1);
+    text-decoration: none;
+    padding: 1vmin;
+    border-radius: 1vmin;
+    font-weight: 400;
+}
+
+.subNav a:hover {
+    background-color: rgba(193,255,114,1);
+    color:  rgba(94,23,235,1);
+}
+
+.subNav span {
+    color: rgba(193,255,114,1);
+    background-color: rgba(84,84,84,.7);
+    width: fit-content;
+    padding: 1vmin;
+    border-radius: .5vmin;
+}

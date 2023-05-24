@@ -6,6 +6,8 @@ const trailSchema = new Schema({
     difficulty: String,
     description: String,
     hazards: String,
+    lat: Number,
+    long: Number,
     resort: {
         type: Schema.Types.ObjectId,
         ref: 'Resort',

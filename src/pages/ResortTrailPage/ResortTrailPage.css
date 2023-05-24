@@ -1,0 +1,10 @@
+#TrailPage {
+    display: flex;
+    flex-direction: column;
+}
+
+#TrailPage h1 {
+    color: white;
+    text-shadow: -1px 0 rgba(94,23,235,1), 0 1px rgba(94,23,235,1), 1px 0 rgba(94,23,235,1), 0 -1px rgba(94,23,235,1);
+    text-decoration: underline;
+}
