@@ -8,6 +8,7 @@ import ResortTrailDetailPage from '../ResortTrailDetailPage/ResortTrailDetailPag
 import ResortConditionsPage from '../ResortConditionsPage/ResortConditionsPage';
 import ResortDiningPage from '../ResortDiningPage/ResortDiningPage';
 import ResortRentalsPage from '../ResortRentalsPage/ResortRentalsPage';
+import ResortInfoPage from '../ResortInfoPage/ResortInfoPage'
 import './ResortHomePage.css' 
 
 export default function ResortHomePage() {
@@ -41,9 +42,10 @@ export default function ResortHomePage() {
 
   return (
       <>
-    <h1><Link to={`/resorts/${home._id}`} className='resortNameh1'>{home.name}</Link></h1>
+    <div><Link to={`/resorts/${home._id}/info`} className='resortName'>{home.name}</Link></div>
     <SubNavBar resort={home._id} curCon={weather?.current ?? "Not loaded yet"} />
     <Routes>
+      <Route path="/info" element={<ResortInfoPage resort={home} />} />
       <Route path="/conditions" element={<ResortConditionsPage resort={home} curCon={weather?.current ?? "Not loaded yet"} fiveDay={weather?.forecast.forecastday ?? "Not loaded yet"} />} />
       <Route path="/dining" element={<ResortDiningPage resort={resort} />} />
       <Route path="/rentals" element={<ResortRentalsPage resort={resort} />} />

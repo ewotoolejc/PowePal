@@ -5,7 +5,7 @@
 
 .subNav a {
     color: rgba(193,255,114,1);
-    background-color:  rgba(94,23,235,1);
+    background-color:  rgba(94,23,235,.6);
     text-decoration: none;
     padding: 1vmin;
     border-radius: 1vmin;
@@ -13,7 +13,7 @@
 }
 
 .subNav a:hover {
-    background-color: rgba(193,255,114,1);
+    background-color: rgba(193,255,114,.6);
     color:  rgba(94,23,235,1);
 }
 
@@ -22,5 +22,7 @@
     background-color: rgba(84,84,84,.7);
     width: fit-content;
     padding: 1vmin;
+    border: solid .3vmin;
+    border-color: rgba(94,23,235,.8);
     border-radius: .5vmin;
 }

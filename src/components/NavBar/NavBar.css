@@ -2,6 +2,7 @@
     background: linear-gradient(25deg, rgba(84,84,84,1) 0%, rgba(94,23,235,1) 35%, rgba(193,255,114,1) 84%);
     padding: 1vmin;
     border-radius: 2vmin;
+    width: fit-content;
 }
 
 .mainNav {

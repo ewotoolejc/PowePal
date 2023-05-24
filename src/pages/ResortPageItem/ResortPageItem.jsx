@@ -6,7 +6,7 @@ export default function ResortPageItem({resort}) {
   // {<ResortHomePage resortID={resort.id}/>}
   return (
       <>
-    <div><Link to={`/resorts/${resort._id}`} className='resorthomelink'>{resort.name}</Link></div>
+    <div><Link to={`/resorts/${resort._id}/info`} className='resorthomelink'>{resort.name}</Link></div>
     </>
   );
 }

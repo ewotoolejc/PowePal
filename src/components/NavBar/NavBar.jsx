@@ -12,7 +12,6 @@ export default function NavBar({ user, setUser }) {
     <div className='mainnavwrap'>
     <nav className='mainNav'>
       <Link to="/resorts" className='homebtn'>Home</Link>
-      &nbsp;&nbsp;|
       &nbsp;&nbsp;
       <span id='userwelcome'>Welcome, {user.name}</span>
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut} className='logoutbtn'>Log Out</Link>

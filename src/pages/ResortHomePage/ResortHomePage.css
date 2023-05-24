@@ -1,9 +1,11 @@
-.resortNameh1 {
+.resortName {
     font-family: 'Racing Sans One', cursive;
     text-decoration: none;
-    color: azure;
+    color: rgba(94,23,235,.9);
+    text-shadow: -2px 0 rgba(193,255,114,1), 0 2px rgba(193,255,114,1), 2px 0 rgba(193,255,114,1), 0 -2px rgba(193,255,114,1);
+    font-size: 12vmin;
 }
 
 .resortNameh1:visited {
-    color: azure;
+    color: rgba(94,23,235,.9)
   }

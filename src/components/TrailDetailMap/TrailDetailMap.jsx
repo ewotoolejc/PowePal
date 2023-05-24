@@ -4,21 +4,22 @@ import {useState, useCallback} from 'react';
 const containerStyle = {
     width: '400px',
     height: '400px'
-  };
+};
 
-  const zoom = 9.8;
-  
+const zoom = 9.8;
+
+
 export default function TrailDetailMap({trail}) {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyA0ZcnOz5HgPqbRcAUtUwYWgeu8XOwOAjQ"
+        googleMapsApiKey: 'AIzaSyA0ZcnOz5HgPqbRcAUtUwYWgeu8XOwOAjQ',
     });
     
     const center = {
         lat: trail.lat,
     lng: trail.long
     };
-    console.log(center)
+
     const [map, setMap] = useState(null);
         
 

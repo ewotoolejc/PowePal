@@ -25,7 +25,7 @@ export default function App() {
   return (
     <main className="App">
       { user ?
-          <>
+          <div className='maindiv'>
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* <Route path="/orders/new" element={<NewOrderPage />} />
@@ -34,7 +34,7 @@ export default function App() {
               <Route path="resorts/:id/*" element={<ResortHomePage />} />
               <Route path="/*" element={<Navigate to="/resorts" />} />
             </Routes>
-          </>
+          </div>
           :
           <AuthPage setUser={setUser} />
       }
