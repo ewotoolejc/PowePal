@@ -1,3 +1,7 @@
+.resortNamecontainer {
+    margin: 1vmin;
+}
+
 .resortName {
     font-family: 'Racing Sans One', cursive;
     text-decoration: none;

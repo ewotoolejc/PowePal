@@ -5,6 +5,7 @@ const ticketsCtrl = require('../../controllers/api/tickets');
 const trailsCtrl = require('../../controllers/api/trails');
 const fooditemsCtrl = require('../../controllers/api/fooditems');
 const rentalitemsCtrl = require('../../controllers/api/rentalitems');
+const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 
 // /api/resorts
@@ -18,6 +19,6 @@ router.get('/:id/condtions');
 router.get('/:id/dining/', fooditemsCtrl.fIndex);
 router.get('/:id/rentals/', rentalitemsCtrl.rIndex);
 
-router.post('/addresorts', resortsCtrl.createResort)
+router.post('/addresorts', ensureLoggedIn, resortsCtrl.createResort)
 
 module.exports = router;

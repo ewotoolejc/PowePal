@@ -42,7 +42,7 @@ export default function ResortHomePage() {
 
   return (
       <>
-    <div><Link to={`/resorts/${home._id}/info`} className='resortName'>{home.name}</Link></div>
+    <div className='resortNamecontainer'><Link to={`/resorts/${home._id}/info`} className='resortName'>{home.name}</Link></div>
     <SubNavBar resort={home._id} curCon={weather?.current ?? "Not loaded yet"} />
     <Routes>
       <Route path="/info" element={<ResortInfoPage resort={home} />} />
