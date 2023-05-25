@@ -4,7 +4,7 @@
 # PowePal
 :mountain_snow:	 :snowboarder: :snowboarder: :snowboarder: :snowflake:
 
-Direct Link to PowePal
+[Direct Link to PowePal](https://powepal.herokuapp.com/)
 
 [Trello Board](https://trello.com/b/dbLQHn6T/powepal)
 
