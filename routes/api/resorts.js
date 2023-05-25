@@ -18,5 +18,6 @@ router.get('/:id/condtions');
 router.get('/:id/dining/', fooditemsCtrl.fIndex);
 router.get('/:id/rentals/', rentalitemsCtrl.rIndex);
 
+router.post('/addresorts', resortsCtrl.createResort)
 
 module.exports = router;

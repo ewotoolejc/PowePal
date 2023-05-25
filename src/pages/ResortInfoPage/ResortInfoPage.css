@@ -18,5 +18,6 @@
     width: 50%;
     padding: 2vmin;
     border-radius: 1vmin;
+    border: .5vmin solid rgba(193,255,114,.8);
     color: white;
 }

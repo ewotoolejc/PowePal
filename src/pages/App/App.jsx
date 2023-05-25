@@ -7,6 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import ResortList from '../ResortList/ResortList'
 import ResortHomePage from '../ResortHomePage/ResortHomePage';
+import AddPage from '../AddPage/AddPage'
 import './App.css'
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
               {/* <Route path="/orders/new" element={<NewOrderPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} /> */}
               <Route path="resorts/" element={<ResortList resorts={resorts} />} />
+              <Route path="/add" element={<AddPage setResorts={setResorts} />}/>
               <Route path="resorts/:id/*" element={<ResortHomePage />} />
               <Route path="/*" element={<Navigate to="/resorts" />} />
             </Routes>

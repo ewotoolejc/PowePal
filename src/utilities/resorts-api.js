@@ -9,3 +9,7 @@ export function getAll() {
 export function getResort(resortId) {
   return sendRequest(`${BASE_URL}/${resortId}`);
 }
+
+export async function addResort(resortData) {
+  return sendRequest(`${BASE_URL}/addresorts`, 'POST', resortData);
+}

@@ -3,6 +3,7 @@ const Resort= require('../../models/resort');
 module.exports = {
     index,
     home,
+    createResort,
 }
 
 async function index(req, res) {
@@ -15,3 +16,12 @@ async function home(req, res) {
     res.json(home);
 }
 
+async function createResort(req, res) {
+    try {
+      req.body.user = req.user._id; 
+      const resort = await Resort.create(req.body);
+      res.json(resort)
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  }

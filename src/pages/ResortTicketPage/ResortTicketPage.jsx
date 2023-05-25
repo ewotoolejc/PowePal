@@ -15,7 +15,7 @@ export default function ResortTicketPage() {
             ticketsArr.push(ticketsAll[i])
         }
       };
-      let tickets = ticketsArr.map(ticket => <><td>{ticket.name}</td> <td>${ticket.price}</td></>)
+      let tickets = ticketsArr.map(ticket => <tr><td>{ticket.name}</td> <td>${ticket.price}</td></tr>)
       setTickets(tickets);
     }
     getTickets();
