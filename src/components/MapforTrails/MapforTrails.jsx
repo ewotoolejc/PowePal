@@ -7,7 +7,7 @@ const containerStyle = {
     height: '400px'
 };
 
-const zoom = 9.8;
+const zoom = 17;
   
 export default function MapForTrails({resort}) {
 
@@ -24,12 +24,12 @@ export default function MapForTrails({resort}) {
     const [map, setMap] = useState(null);
         
 
-    const onLoad = useCallback(function callback(map) {
-        const bounds = new window.google.maps.LatLngBounds(center);
-        map.fitBounds(bounds);
+    // const onLoad = useCallback(function callback(map) {
+    //     const bounds = new window.google.maps.LatLngBounds(center);
+    //     map.fitBounds(bounds);
 
-        setMap(map)
-    }, [])
+    //     setMap(map)
+    // }, [])
 
     const onUnmount = useCallback(function callback(map) {
         setMap(null)
@@ -40,7 +40,6 @@ export default function MapForTrails({resort}) {
             mapContainerStyle={containerStyle}
             center={center}
             zoom={zoom}
-            onLoad={onLoad}
             onUnmount={onUnmount}
         >
             <></>
