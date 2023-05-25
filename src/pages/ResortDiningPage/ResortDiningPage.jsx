@@ -25,7 +25,7 @@ export default function ResortTicketPage() {
     <h1 className='Diningh1'>Dining</h1> 
     <br />
     <div className='fooditemscontainer'>
-    {fooditems.length ? {fooditems} : 'No food avaialble at this Resort!'}
+    {fooditems.length ? <>{fooditems}</> : 'No food avaialble at this Resort!'}
     </div>
     </>
   );

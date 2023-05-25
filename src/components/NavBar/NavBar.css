@@ -27,6 +27,19 @@ background-color: rgba(94,23,235,.6);
 color: rgba(193,255,114,1);
 }
 
+.Addbtn {
+    background-color: rgba(94,23,235,.6);
+    padding: 1vmin;
+    border-radius: 2vmin;
+    font:rgba(193,255,114,1);
+    text-decoration: none; 
+}
+
+.Addbtn:hover {
+    background-color: rgba(193,255,114,.6);
+    color: rgba(94,23,235,1);
+}
+
 #userwelcome {
     color: rgba(94,23,235,1);
     text-shadow: -1px 0 rgba(193,255,114,1), 0 1px rgba(193,255,114,1), 1px 0 rgba(193,255,114,1), 0 -1px rgba(193,255,114,1);

@@ -26,14 +26,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 2vmin;
-  height: 95vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
 }
 
 .Brand {
-  justify-self: start;
+  justify-self: end;
+  position: absolute;
   border-radius: 1vmin;
   height: 15vmin;
   width: 15vmin;

@@ -32,7 +32,7 @@ export default function App() {
               {/* <Route path="/orders/new" element={<NewOrderPage />} />
               <Route path="/orders" element={<OrderHistoryPage />} /> */}
               <Route path="resorts/" element={<ResortList resorts={resorts} />} />
-              <Route path="/add" element={<AddPage setResorts={setResorts} />}/>
+              <Route path="/add" element={<AddPage setResorts={setResorts} user={user} />}/>
               <Route path="resorts/:id/*" element={<ResortHomePage />} />
               <Route path="/*" element={<Navigate to="/resorts" />} />
             </Routes>

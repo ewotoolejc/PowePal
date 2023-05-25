@@ -13,7 +13,7 @@ export default function MapForTrails({resort}) {
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: 'AIzaSyA0ZcnOz5HgPqbRcAUtUwYWgeu8XOwOAjQ',
+        googleMapsApiKey: process.env.REACT_APP_GMAP_API,
     });
 
     const center = {

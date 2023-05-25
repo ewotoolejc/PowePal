@@ -1,6 +1,7 @@
 import { Component } from 'react';
 // added for handle submit
 import { addResort } from '../../utilities/resorts-service';
+import './AddResortForm.css';
 
 export default class AddResortForm extends Component {
     state = {
@@ -37,6 +38,7 @@ export default class AddResortForm extends Component {
         // An error occurred 
         this.setState({ error: 'Add Resort Failed - Try Again' });
       }
+      window.location.reload(true);
     };
     
     render() {
@@ -44,19 +46,19 @@ export default class AddResortForm extends Component {
         <div>
           <div className="form-container" id='addResortForm'>
             <form autoComplete="off" onSubmit={this.handleSubmit}>
-              <label>Name</label>
+              <label>Name:</label>
               <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-              <label>Town</label>
+              <label>Town:</label>
               <input type="text" name="town" value={this.state.town} onChange={this.handleChange} required />
-              <label>State</label>
+              <label>State:</label>
               <input type="text" name="state" value={this.state.state} onChange={this.handleChange} required />
-              <label>Description</label>
+              <label>Description:</label>
               <input type="textarea" name="description" value={this.state.description} onChange={this.handleChange} required />
-              <label>Latitude</label>
+              <label>Latitude:</label>
               <input type="text" name="lat" value={this.state.lat} onChange={this.handleChange} required />
-              <label>Longitude</label>
+              <label>Longitude:</label>
               <input type="text" name="long" value={this.state.long} onChange={this.handleChange} required />
-              <label>Resort Logo URL</label>
+              <label>Resort Logo URL:</label>
               <input type="url" name="logourl" value={this.state.logourl} onChange={this.handleChange} required />
               <button type="submit" className='Addresortbtn'>Add Resort</button>
             </form>

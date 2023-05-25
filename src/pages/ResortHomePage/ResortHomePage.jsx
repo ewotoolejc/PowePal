@@ -16,6 +16,7 @@ export default function ResortHomePage() {
   const [home, setHome] = useState('');
   const [weather, setWeather] = useState(null);
 
+
   useEffect(function() {
     async function getHome() {
       const home = await resortsAPI.getResort(resort.id);
@@ -24,7 +25,7 @@ export default function ResortHomePage() {
     getHome();
     async function getAllWeather() {
       const home = await resortsAPI.getResort(resort.id);
-      const url = `http://api.weatherapi.com/v1/forecast.json?key=8f291e6fb6f7407eb93171917232305&q=${home.town}&days=5`;
+      const url = `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_APP}&q=${home.town}&days=5`;
       fetch(url)
       .then((res) => {
         if (!res.ok) {
