@@ -57,8 +57,7 @@ Resort Trails Page:</u>
 
 <u>API's used:</u>
 
-<img src="https://blog.weatherapi.com/wp-content/uploads/2020/02/Asset-62.png"  width="30%" height="10%">
-
+![Weather](https://blog.weatherapi.com/wp-content/uploads/2020/02/Asset-62.png)
 ![Google Maps](https://icongr.am/material/google-maps.svg?size=60&color=ffffff)
 
 ---------
