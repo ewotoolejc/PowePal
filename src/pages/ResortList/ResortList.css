@@ -8,5 +8,5 @@
     font-family: 'Racing Sans One', cursive;
     font-size: 12vmin;
     color: rgba(193,255,114,.4);
-    -webkit-text-stroke: 3px rgba(94,23,235,1);
+    -webkit-text-stroke: .5vmin rgba(94,23,235,1);
 }

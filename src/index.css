@@ -40,6 +40,16 @@ body {
   width: 15vmin;
 }
 
+@media (max-width:767px) {
+  .Brand {
+    justify-self: end;
+    align-self: end;
+    border-radius: 1vmin;
+    height: 15vmin;
+    width: 15vmin;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
